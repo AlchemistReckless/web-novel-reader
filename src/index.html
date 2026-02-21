@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Novel Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top control bar -->
+    <div class="controls">
+        <button id="decrease-font" class="control-button" type="button">A-</button>
+        <button id="increase-font" class="control-button" type="button">A+</button>
+        <button id="toggle-theme" class="control-button" type="button">Toggle Dark Mode</button>
+
+        <label for="chapter-select" class="sr-only">Select chapter</label>
+        <select id="chapter-select" class="control-select" aria-label="Select chapter"></select>
+
+        <button id="save-bookmark" class="control-button" type="button">Save Bookmark</button>
+    </div>
+
+    <div class="reader" id="reader">
+        <h1 id="chapter-title" class="chapter-title">Chapter 1: The Beginning</h1>
+
+        <!-- Reading progress for current chapter -->
+        <div class="progress-track" aria-label="Reading progress">
+            <div id="progress-fill" class="progress-fill"></div>
+        </div>
+
+        <div class="chapter-content" id="content"></div>
+
+        <div class="navigation">
+            <button id="prev-chapter" class="nav-button" type="button">Previous</button>
+            <button id="next-chapter" class="nav-button" type="button">Next</button>
+        </div>
+
+        <section class="bookmark-section" aria-labelledby="bookmark-heading">
+            <h2 id="bookmark-heading">Bookmarks</h2>
+            <p id="status-message" class="status-note"></p>
+            <div id="bookmark-list" class="bookmark-list"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
